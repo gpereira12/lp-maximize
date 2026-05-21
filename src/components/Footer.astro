@@ -1,0 +1,80 @@
+---
+// Rodapé Institucional
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container footer__container">
+    <div class="footer__brand">
+      <span class="footer__logo-text">Maximize Digital</span>
+      <p class="footer__slogan">Crescimento ancorado em resultados reais.</p>
+    </div>
+
+    <div class="footer__legal">
+      <p>&copy; {currentYear} Maximize Digital. Todos os direitos reservados.</p>
+      <p class="cfm-notice">
+        Comunicação alinhada às normas éticas do Conselho Federal de Medicina (CFM).
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: #151715; /* Tom quase preto ultra luxuoso */
+    color: var(--color-bg-light);
+    padding: 4rem 0 3rem 0;
+    border-top: 1px solid rgba(230, 222, 200, 0.05);
+    font-size: 0.9rem;
+  }
+
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .footer__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .footer__logo-text {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--color-accent);
+    letter-spacing: -0.02em;
+  }
+
+  .footer__slogan {
+    opacity: 0.6;
+    font-size: 0.85rem;
+  }
+
+  .footer__legal {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    opacity: 0.7;
+  }
+
+  @media (max-width: 768px) {
+    .footer__container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer__legal {
+      text-align: center;
+    }
+  }
+
+  .cfm-notice {
+    font-size: 0.8rem;
+    opacity: 0.5;
+  }
+</style>

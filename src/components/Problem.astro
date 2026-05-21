@@ -1,0 +1,724 @@
+---
+// Seção 2: Diagnóstico Interativo de Rotina (4 Sintomas Mapeados e Barra de Progresso)
+---
+
+<section class="problem section section--dark" id="problema">
+  <div class="container problem__container fade-in-up">
+    <span class="tagline">O Desafio</span>
+
+    <h2 class="problem__headline">
+      Você sente que atende demais, fatura de menos e novos pacientes não
+      chegam?
+    </h2>
+
+    <!-- Grid Sensorial Interativo (2 Colunas x 2 Linhas) -->
+    <div class="symptoms-grid">
+      <!-- Card 1: Agenda Instável -->
+      <div
+        class="symptom-card card"
+        data-symptom-id="1"
+        role="checkbox"
+        aria-checked="false"
+        tabindex="0"
+      >
+        <div class="symptom-card__header">
+          <div class="symptom-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <!-- Controle Intuitivo de Checkbox -->
+          <div class="card-checkbox-wrapper">
+            <span class="checkbox-label">Selecionar</span>
+            <div class="checkbox-box">
+              <svg
+                class="check-mark"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <h3 class="symptom-title">Agenda Instável & Indicações</h3>
+        <p class="symptom-desc">
+          Picos aleatórios de movimento seguidos por semanas de silêncio.
+          Depender exclusivamente do "boca a boca" torna o faturamento da
+          clínica totalmente imprevisível.
+        </p>
+      </div>
+
+      <!-- Card 2: Convênios -->
+      <div
+        class="symptom-card card"
+        data-symptom-id="2"
+        role="checkbox"
+        aria-checked="false"
+        tabindex="0"
+      >
+        <div class="symptom-card__header">
+          <div class="symptom-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <div class="card-checkbox-wrapper">
+            <span class="checkbox-label">Selecionar</span>
+            <div class="checkbox-box">
+              <svg
+                class="check-mark"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <h3 class="symptom-title">Sobrecarga de Convênios</h3>
+        <p class="symptom-desc">
+          Trabalhar horas exaustivas atendendo dezenas de pacientes por dia
+          apenas para cobrir custos fixos, recebendo repasses defasados que
+          esgotam a sua energia.
+        </p>
+      </div>
+
+      <!-- Card 3: Anúncios Errados -->
+      <div
+        class="symptom-card card"
+        data-symptom-id="3"
+        role="checkbox"
+        aria-checked="false"
+        tabindex="0"
+      >
+        <div class="symptom-card__header">
+          <div class="symptom-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M21 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9c0 1.5-.5 3-1.5 4s-2.5 1.5-4 1.5-3-.5-4-1.5m6-13A9 9 0 0 0 3 12a9 9 0 0 0 9 9"
+              ></path>
+              <line x1="3" y1="3" x2="21" y2="21"></line>
+            </svg>
+          </div>
+          <div class="card-checkbox-wrapper">
+            <span class="checkbox-label">Selecionar</span>
+            <div class="checkbox-box">
+              <svg
+                class="check-mark"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <h3 class="symptom-title">Anúncios no Escuro</h3>
+        <p class="symptom-desc">
+          Apertar botões de impulsionamento sem método ou contratar agências
+          generalistas que rodam campanhas sem entender de saúde, queimando
+          verba sem trazer retorno.
+        </p>
+      </div>
+
+      <!-- Card 4: Pacientes Desqualificados -->
+      <div
+        class="symptom-card card"
+        data-symptom-id="4"
+        role="checkbox"
+        aria-checked="false"
+        tabindex="0"
+      >
+        <div class="symptom-card__header">
+          <div class="symptom-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+              ></path>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <div class="card-checkbox-wrapper">
+            <span class="checkbox-label">Selecionar</span>
+            <div class="checkbox-box">
+              <svg
+                class="check-mark"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <h3 class="symptom-title">Contatos Desqualificados</h3>
+        <p class="symptom-desc">
+          Receber dezenas de mensagens de curiosos no WhatsApp que apenas
+          perguntam "qual o preço?" e desaparecem, tomando o tempo da sua
+          secretária sem agendar.
+        </p>
+      </div>
+    </div>
+
+    <!-- Barra de Progresso de Diagnóstico -->
+    <div class="progress-section">
+      <div class="progress-info">
+        <span class="progress-title">Gargalos Identificados na Captação</span>
+        <span class="progress-percentage" id="progressPercentage">0%</span>
+      </div>
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" id="progressBarFill"></div>
+      </div>
+    </div>
+
+    <!-- Container da Revelação Estratégica (Visível em tempo real após o check) -->
+    <div class="reveal-container" id="diagnosisReveal">
+      <div class="reveal-card">
+        <span class="reveal-label">O Diagnóstico Real</span>
+        <p class="reveal-text">
+          O problema não é o seu serviço ou a qualidade do seu atendimento.
+        </p>
+        <p class="reveal-highlight">
+          👉 É a estratégia de marketing errada para a área da saúde.
+        </p>
+
+        <div class="solution-box">
+          <span class="solution-badge">A Solução Maximize</span>
+          <p class="solution-desc">
+            Substituímos curiosos e dependência de convênios por <strong
+              >pacientes qualificados</strong
+            > através de campanhas ativas de intenção no Google Ads.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA de Transição -->
+    <div class="problem__cta">
+      <a href="#contato" class="btn btn--light btn--shine-dark">
+        Quero a Estratégia Certa
+      </a>
+      <span class="problem__microcopy">
+        Receba um plano prático de captação automática para o seu consultório.
+      </span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .problem {
+    background-color: var(--color-primary);
+    position: relative;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    overflow: hidden;
+  }
+
+  .problem__container {
+    max-width: 1350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+
+  .tagline {
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.85rem;
+    font-weight: 800;
+  }
+
+  .problem__headline {
+    font-size: clamp(1.8rem, 3.2vw, 2.75rem);
+    margin-bottom: 4rem;
+    color: var(--color-bg);
+    text-align: center;
+    max-width: 850px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  /* Grid Sensorial (4 Colunas no Desktop / Widescreen) */
+  .symptoms-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    margin-bottom: 3.5rem;
+  }
+
+  @media (max-width: 1200px) {
+    .symptoms-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 650px) {
+    .symptoms-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Estilização Intuitiva do Card Selecionável */
+  .symptom-card {
+    background-color: var(--color-bg);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    padding: 2rem 1.4rem;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    transition: all var(--transition-normal);
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    margin: 0;
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+
+  .symptom-card:hover {
+    transform: translateY(-5px);
+    background-color: #faf6ee;
+    border-color: rgba(197, 168, 128, 0.4);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Estado Selecionado do Card */
+  .symptom-card.selected {
+    background-color: #faf6ee;
+    border-color: var(--color-accent);
+    box-shadow: 0 15px 40px rgba(197, 168, 128, 0.25);
+    transform: translateY(-3px);
+  }
+
+  .symptom-card:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 4px;
+  }
+
+  .symptom-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .symptom-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(44, 62, 42, 0.2);
+  }
+
+  .symptom-card.selected .symptom-icon {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+  }
+
+  /* Checkbox Intuitivo Integrado */
+  .card-checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .checkbox-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    transition: all 0.2s ease;
+  }
+
+  .symptom-card:hover .checkbox-label {
+    color: var(--color-primary);
+  }
+
+  .symptom-card.selected .checkbox-label {
+    color: var(--color-accent);
+    font-weight: 800;
+  }
+
+  .checkbox-box {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    border: 2px solid rgba(44, 62, 42, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .check-mark {
+    width: 14px;
+    height: 14px;
+    color: var(--color-primary);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .symptom-card.selected .checkbox-box {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+
+  .symptom-card.selected .check-mark {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .symptom-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+
+  .symptom-desc {
+    font-size: 0.95rem;
+    color: var(--color-text);
+    line-height: 1.6;
+    font-weight: 500;
+  }
+
+  /* Seção da Barra de Progresso */
+  .progress-section {
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 2rem;
+  }
+
+  .progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+
+  .progress-title {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: rgba(230, 222, 200, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .progress-percentage {
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: var(--color-accent);
+    font-variant-numeric: tabular-nums;
+    transition: all 0.3s ease;
+  }
+
+  .progress-bar-track {
+    width: 100%;
+    height: 8px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--color-accent), #fff59d);
+    border-radius: 4px;
+    transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 0 10px rgba(197, 168, 128, 0.5);
+  }
+
+  /* Container da Revelação Dinâmica */
+  .reveal-container {
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    display: none;
+  }
+
+  .reveal-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-card {
+    background: linear-gradient(
+      135deg,
+      rgba(20, 28, 18, 0.8) 0%,
+      rgba(10, 15, 9, 0.9) 100%
+    );
+    border: 1px solid rgba(197, 168, 128, 0.3);
+    border-left: 4px solid var(--color-accent);
+    padding: 3rem 2.5rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+  }
+
+  @media (max-width: 650px) {
+    .reveal-card {
+      padding: 2rem 1.5rem;
+    }
+  }
+
+  .reveal-label {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: rgba(230, 222, 200, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .reveal-text {
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
+    color: var(--color-bg);
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+  .reveal-highlight {
+    font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+    font-weight: 800;
+    color: var(--color-accent);
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    margin-top: 0.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Solução Integrada */
+  .solution-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(197, 168, 128, 0.2);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: left;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 750px;
+  }
+
+  .solution-badge {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    background-color: var(--color-accent);
+    padding: 3px 10px;
+    border-radius: 4px;
+    align-self: flex-start;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .solution-desc {
+    font-size: 0.95rem;
+    color: rgba(230, 222, 200, 0.9);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .solution-desc strong {
+    color: var(--color-accent);
+  }
+
+  /* Botão de Ação */
+  .problem__cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .btn--shine-dark {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn--shine-dark::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(44, 62, 42, 0.1),
+      transparent
+    );
+    animation: shineEffectDark 5s ease-in-out infinite;
+  }
+
+  @keyframes shineEffectDark {
+    0%,
+    80% {
+      left: -100%;
+    }
+    100% {
+      left: 200%;
+    }
+  }
+
+  .problem__microcopy {
+    font-size: 0.85rem;
+    color: rgba(230, 222, 200, 0.6);
+  }
+</style>
+
+<!-- Lógica Client-Side de Diagnóstico e Progresso com Acessibilidade Integral -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".symptom-card");
+    const progressBarFill = document.getElementById("progressBarFill");
+    const progressPercentage = document.getElementById("progressPercentage");
+    const diagnosisReveal = document.getElementById("diagnosisReveal");
+
+    if (!cards.length) return;
+
+    cards.forEach((card) => {
+      const toggleCard = () => {
+        // Alterna a seleção da interface
+        card.classList.toggle("selected");
+        const isSelected = card.classList.contains("selected");
+        card.setAttribute("aria-checked", isSelected ? "true" : "false");
+
+        // Atualiza a label intuitiva
+        const label = card.querySelector(".checkbox-label");
+        if (label) {
+          label.textContent = isSelected ? "Identificado" : "Selecionar";
+        }
+
+        // Calcula a porcentagem com base no total de 4 sintomas
+        const selectedCount = document.querySelectorAll(
+          ".symptom-card.selected",
+        ).length;
+        const percentage = Math.round((selectedCount / cards.length) * 100);
+
+        // Atualiza a barra de progresso cinética
+        if (progressBarFill) progressBarFill.style.width = percentage + "%";
+        if (progressPercentage)
+          progressPercentage.textContent = percentage + "%";
+
+        // Lógica de exibição com transição suave da revelação
+        if (selectedCount > 0) {
+          if (diagnosisReveal) {
+            diagnosisReveal.style.display = "block";
+            requestAnimationFrame(() => {
+              diagnosisReveal.classList.add("visible");
+            });
+          }
+        } else {
+          if (diagnosisReveal) {
+            diagnosisReveal.classList.remove("visible");
+            setTimeout(() => {
+              if (
+                document.querySelectorAll(".symptom-card.selected").length === 0
+              ) {
+                diagnosisReveal.style.display = "none";
+              }
+            }, 400);
+          }
+        }
+      };
+
+      card.addEventListener("click", toggleCard);
+
+      // Suporte acessível via teclado (Enter ou Espaço)
+      card.addEventListener("keydown", (e) => {
+        if ("key" in e && (e.key === "Enter" || e.key === " ")) {
+          e.preventDefault();
+          toggleCard();
+        }
+      });
+    });
+  });
+</script>

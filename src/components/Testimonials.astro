@@ -1,0 +1,228 @@
+---
+// Seção 7: Depoimentos (Prova Social Real e Humanizada)
+const whatsappUrl = import.meta.env.PUBLIC_WHATSAPP_URL || "https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20entender%20como%20atrair%20pacientes%20particulares%20via%20Google%20Ads%20para%20minha%20clínica.";
+---
+
+<section class="testimonials section" id="depoimentos">
+  <div class="container testimonials__container fade-in-up">
+    <div class="testimonials__header">
+      <span class="tagline">Depoimentos</span>
+      <h2 class="testimonials__headline">
+        O que dizem os <span class="text-accent">nossos parceiros</span>
+      </h2>
+      <p class="testimonials__subheadline">
+        Conversas reais sobre transformações práticas em clínicas e consultórios
+      </p>
+    </div>
+
+    <div class="testimonials__grid">
+      <!-- Depoimento 1 -->
+      <div class="testimonial-card">
+        <div class="testimonial-card__header">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <span class="testimonial-card__badge">Psicoterapia</span>
+        </div>
+        
+        <p class="testimonial-card__text">
+          "<strong>Daniel, muito obrigada! Tem mudado nossas vidas</strong>, simplesmente a otimização da campanha do Google Ads faz com que todo dia chegue pacientes qualificados para psicoterapia e que paguem um valor mensal excelente, isso é uma benção! Fico imaginando a vida toda você gerenciando a nossa campanha e sendo sempre assim! <strong>Em menos de um mês minha agenda de mais de 32 horários está lotando muito rápido!</strong> E sempre aberto para ouvir também! Com muita educação, gentileza, capacitação e especialização nessa área de tráfego pago, que faz toda diferença."
+        </p>
+      </div>
+
+      <!-- Depoimento 2 -->
+      <div class="testimonial-card">
+        <div class="testimonial-card__header">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <span class="testimonial-card__badge">Saúde Mental</span>
+        </div>
+        
+        <p class="testimonial-card__text">
+          "Dani, <strong>a qualidade dos leads melhorou muito. Aumentou a quantidade também.</strong> Recebo leads que já fizeram terapia, com maior nível de consciência... Recebi borderlines e mulheres ou maridos preocupados com as esposas com desafios em equilibrar maternidade e trabalho, sobrecarregadas etc. O perfil dos contatos está muito alinhado com o que buscávamos."
+        </p>
+      </div>
+    </div>
+
+    <!-- Botão de CTA da Seção -->
+    <div class="testimonials__cta">
+      <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--shine">
+        Falar com um Especialista
+      </a>
+      <span class="testimonials__microcopy">
+        Entenda o potencial de captação da sua clínica.
+      </span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials {
+    background-color: var(--color-bg); /* Fundo Claro (Areia) */
+    position: relative;
+  }
+
+  .testimonials__container {
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonials__header {
+    text-align: center;
+    max-width: 750px;
+    margin-bottom: 4rem;
+  }
+
+  .testimonials__headline {
+    font-size: clamp(2.2rem, 3.8vw, 3.5rem);
+    color: var(--color-primary);
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+  }
+
+  .text-accent {
+    color: var(--color-accent-dark, #a68b65);
+  }
+
+  .testimonials__subheadline {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    opacity: 0.8;
+    font-weight: 500;
+  }
+
+  /* Grid de Depoimentos */
+  .testimonials__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .testimonials__grid {
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+  }
+
+  /* Card de Depoimento */
+  .testimonial-card {
+    background: #ffffff;
+    border: 1px solid rgba(44, 62, 42, 0.08);
+    border-radius: 16px;
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    transition: all var(--transition-normal);
+    position: relative;
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent);
+    box-shadow: 0 20px 40px rgba(44, 62, 42, 0.05);
+  }
+
+  .testimonial-card::before {
+    content: "“";
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+    font-size: 6rem;
+    font-family: serif;
+    color: rgba(197, 168, 128, 0.15);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .testimonial-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .testimonial-card__stars {
+    color: var(--color-accent-dark, #a68b65);
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+  }
+
+  .testimonial-card__badge {
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 3px 8px;
+    background: rgba(197, 168, 128, 0.1);
+    color: var(--color-accent-dark, #a68b65);
+    border-radius: 100px;
+  }
+
+  .testimonial-card__text {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: var(--color-primary);
+    opacity: 0.9;
+    margin: 0;
+    font-style: italic;
+    z-index: 1;
+  }
+
+  .testimonial-card__text strong {
+    font-style: normal;
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  /* CTA Inferior */
+  .testimonials__cta {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .testimonials__microcopy {
+    font-size: 0.85rem;
+    color: var(--color-primary);
+    opacity: 0.65;
+  }
+
+  .btn--shine {
+    position: relative;
+    overflow: hidden;
+  }
+  .btn--shine::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    animation: shineEffect 6s ease-in-out infinite;
+  }
+  @keyframes shineEffect {
+    0%,
+    80% {
+      left: -100%;
+    }
+    100% {
+      left: 200%;
+    }
+  }
+</style>
+

@@ -1,0 +1,99 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { 
+  title, 
+  description = "Maximize Digital. Assessoria especializada em Google Ads e captação automática de pacientes particulares para Clínicas de Alto Padrão." 
+} = Astro.props;
+
+const gtmId = import.meta.env.PUBLIC_GTM_ID || "";
+
+const schemaJson = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Maximize Digital",
+  "url": "https://maximizedigital.com.br",
+  "logo": "https://maximizedigital.com.br/logo.jpeg",
+  "description": description,
+  "areaServed": "BR",
+  "priceRange": "$$$",
+  "slogan": "Crescimento ancorado em resultados reais."
+};
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    
+    <!-- JSON-LD Schema.org -->
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(schemaJson)} />
+
+    <!-- Google Tag Manager -->
+    {gtmId && (
+      <script is:inline define:vars={{ gtmId }}>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer',gtmId);
+      </script>
+    )}
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    {gtmId && (
+      <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    )}
+
+    <main>
+      <slot />
+    </main>
+
+    <!-- Script de Animação de Scroll (Intersection Observer) -->
+    <script>
+      const setupAnimations = () => {
+        const observerOptions = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              // Opcional: observer.unobserve(entry.target) para animar apenas uma vez
+            }
+          });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-up').forEach(elem => {
+          observer.observe(elem);
+        });
+      };
+
+      // Inicializa quando o DOM estiver pronto
+      document.addEventListener('DOMContentLoaded', setupAnimations);
+    </script>
+  </body>
+</html>

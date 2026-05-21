@@ -1,0 +1,333 @@
+---
+// Seção 6: O Retorno no Caixa (Prova Social e Validação de Resultados)
+const whatsappUrl = import.meta.env.PUBLIC_WHATSAPP_URL || "https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20entender%20como%20atrair%20pacientes%20particulares%20via%20Google%20Ads%20para%20minha%20clínica.";
+---
+
+<section class="results section section--dark" id="resultados">
+  <div class="container results__container fade-in-up">
+    <div class="results__header">
+      <span class="tagline">Resultados</span>
+      <h2 class="results__headline">
+        Por que escolher a <span class="text-accent">Maximize Digital</span>?
+      </h2>
+      <p class="results__subheadline">
+        Resultados que falam por si
+      </p>
+    </div>
+
+    <!-- Grid de Métricas Principais (4 Colunas) -->
+    <div class="results__metrics-grid">
+      <!-- Métrica 1 -->
+      <div class="metric-card">
+        <div class="metric-card__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        </div>
+        <div class="metric-card__number">8</div>
+        <div class="metric-card__label">anos</div>
+        <div class="metric-card__desc">de experiência em Vendas</div>
+      </div>
+
+      <!-- Métrica 2 -->
+      <div class="metric-card">
+        <div class="metric-card__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        </div>
+        <div class="metric-card__number">2M+</div>
+        <div class="metric-card__label">reais</div>
+        <div class="metric-card__desc">gerenciados em anúncios</div>
+      </div>
+
+      <!-- Métrica 3 -->
+      <div class="metric-card">
+        <div class="metric-card__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+        </div>
+        <div class="metric-card__number">12M+</div>
+        <div class="metric-card__label">reais</div>
+        <div class="metric-card__desc">em retorno gerado</div>
+      </div>
+
+      <!-- Métrica 4 -->
+      <div class="metric-card">
+        <div class="metric-card__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        </div>
+        <div class="metric-card__number">100+</div>
+        <div class="metric-card__label">clientes</div>
+        <div class="metric-card__desc">atendidos com sucesso</div>
+      </div>
+    </div>
+
+    <!-- Destaques Extras Inferiores (2 Colunas) -->
+    <div class="results__badges-grid">
+      <!-- Badge 1: Especialização -->
+      <div class="badge-card">
+        <div class="badge-card__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        </div>
+        <div class="badge-card__content">
+          <div class="badge-card__title">Especialização total</div>
+          <div class="badge-card__subtitle">Marketing na Área da Saúde</div>
+        </div>
+      </div>
+
+      <!-- Badge 2: Mentoria -->
+      <div class="badge-card">
+        <div class="badge-card__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
+        </div>
+        <div class="badge-card__content">
+          <div class="badge-card__title">Mentorado Subido PRO</div>
+          <div class="badge-card__subtitle">Metodologia validada em performance</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botão de CTA da Seção -->
+    <div class="results__cta">
+      <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="btn btn--light btn--shine">
+        Quero Escalar Meu Faturamento
+      </a>
+      <span class="results__microcopy">
+        Análise estratégica e captação ética de pacientes.
+      </span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .results {
+    background-color: var(--color-primary);
+    position: relative;
+  }
+
+  .results__container {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .results__header {
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 4rem;
+  }
+
+  .results__headline {
+    font-size: clamp(2.2rem, 3.8vw, 3.5rem);
+    color: var(--color-bg);
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+  }
+
+  .text-accent {
+    color: var(--color-accent);
+  }
+
+  .results__subheadline {
+    font-size: 1.25rem;
+    color: var(--color-bg-light);
+    opacity: 0.75;
+    font-weight: 500;
+  }
+
+  /* Grid de Métricas */
+  .results__metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 992px) {
+    .results__metrics-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .results__metrics-grid {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+  }
+
+  /* Card de Métrica */
+  .metric-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(230, 222, 200, 0.1);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all var(--transition-normal);
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+
+  .metric-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .metric-card__icon {
+    color: var(--color-accent);
+    opacity: 0.6;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(197, 168, 128, 0.08);
+    padding: 10px;
+    border-radius: 50%;
+  }
+
+  .metric-card:hover .metric-card__icon {
+    opacity: 1;
+    transform: scale(1.05);
+    transition: all var(--transition-fast);
+  }
+
+  .metric-card__number {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 800;
+    color: var(--color-bg);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+    letter-spacing: -0.02em;
+  }
+
+  .metric-card__label {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+  }
+
+  .metric-card__desc {
+    font-size: 0.9rem;
+    color: var(--color-bg-light);
+    opacity: 0.7;
+    line-height: 1.4;
+  }
+
+  /* Grid de Badges */
+  .results__badges-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 900px;
+  }
+
+  @media (max-width: 768px) {
+    .results__badges-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+
+  /* Card de Badge */
+  .badge-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(230, 222, 200, 0.08);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    transition: all var(--transition-normal);
+  }
+
+  .badge-card:hover {
+    border-color: rgba(197, 168, 128, 0.4);
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .badge-card__icon {
+    color: var(--color-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(197, 168, 128, 0.08);
+    padding: 12px;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+
+  .badge-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .badge-card__title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent);
+  }
+
+  .badge-card__subtitle {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-bg);
+  }
+
+  /* CTA Inferior */
+  .results__cta {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .results__microcopy {
+    font-size: 0.85rem;
+    color: var(--color-bg-light);
+    opacity: 0.65;
+  }
+
+  .btn--shine {
+    position: relative;
+    overflow: hidden;
+  }
+  .btn--shine::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    animation: shineEffect 6s ease-in-out infinite;
+  }
+  @keyframes shineEffect {
+    0%,
+    80% {
+      left: -100%;
+    }
+    100% {
+      left: 200%;
+    }
+  }
+</style>
+

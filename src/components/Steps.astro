@@ -1,0 +1,208 @@
+---
+// Seção 4: O Passo a Passo da Campanha (Metodologia Otimizada Horizontal - Dark)
+---
+
+<section class="steps-new section section--dark" id="metodologia">
+  <div class="container steps-new__container fade-in-up">
+    <div class="steps-new__header">
+      <span class="tagline">Metodologia Transparente</span>
+      <h2 class="steps-new__headline">Como funciona o nosso método</h2>
+      <p class="steps-new__intro">
+        Um processo refinado de engenharia de dados para converter buscas em agendamentos particulares.
+      </p>
+    </div>
+
+    <div class="steps-new__timeline">
+      <!-- Linha de fundo -->
+      <div class="steps-new__line"></div>
+
+      <div class="steps-new__grid">
+        <!-- Passo 1 -->
+        <div class="steps-new__item">
+          <div class="steps-new__marker">01</div>
+          <h3 class="steps-new__title">Diagnóstico & Mapeamento</h3>
+          <p class="steps-new__desc">
+            Analisamos sua especialidade e identificamos os termos exatos que pacientes de alto padrão usam no Google.
+          </p>
+        </div>
+
+        <!-- Passo 2 -->
+        <div class="steps-new__item">
+          <div class="steps-new__marker">02</div>
+          <h3 class="steps-new__title">Engenharia de Campanhas</h3>
+          <p class="steps-new__desc">
+            Criamos anúncios éticos e precisos, blindando sua verba contra cliques de curiosos ou desqualificados.
+          </p>
+        </div>
+
+        <!-- Passo 3 -->
+        <div class="steps-new__item">
+          <div class="steps-new__marker">03</div>
+          <h3 class="steps-new__title">Otimização de Performance</h3>
+          <p class="steps-new__desc">
+            Ajustes diários focados em reduzir seu custo por contato e aumentar a previsibilidade da sua agenda.
+          </p>
+        </div>
+
+        <!-- Passo 4 -->
+        <div class="steps-new__item">
+          <div class="steps-new__marker">04</div>
+          <h3 class="steps-new__title">Escala & Transparência</h3>
+          <p class="steps-new__desc">
+            Relatórios claros sobre o retorno e escala estratégica para preencher seus horários particulares.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="steps-new__cta">
+      <a href="#contato" class="btn btn--light">
+        Aplicar Este Funil na Minha Clínica
+      </a>
+      <span class="steps-new__microcopy">
+        Fale com nossa equipe e receba uma análise de viabilidade para sua região.
+      </span>
+    </div>
+  </div>
+</section>
+
+<style is:inline>
+  .steps-new {
+    background-color: #2c3e2a; /* var(--color-primary) */
+    padding: 100px 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .steps-new__container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .steps-new__header {
+    margin-bottom: 80px;
+    max-width: 800px;
+  }
+
+  .steps-new .tagline {
+    color: #c5a880; /* var(--color-accent) */
+  }
+
+  .steps-new__headline {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #faf9f6; /* var(--color-bg) */
+    margin: 20px 0;
+    font-weight: 800;
+    line-height: 1.1;
+  }
+
+  .steps-new__intro {
+    font-size: 1.2rem;
+    color: rgba(230, 222, 200, 0.8);
+    line-height: 1.6;
+  }
+
+  .steps-new__timeline {
+    position: relative;
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .steps-new__line {
+    position: absolute;
+    top: 30px;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: rgba(197, 168, 128, 0.2);
+    z-index: 0;
+  }
+
+  .steps-new__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .steps-new__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+
+  .steps-new__item:hover {
+    transform: translateY(-5px);
+  }
+
+  .steps-new__marker {
+    width: 60px;
+    height: 60px;
+    background: #c5a880; /* var(--color-accent) */
+    color: #2c3e2a; /* var(--color-primary) */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    margin-bottom: 30px;
+    box-shadow: 0 0 0 10px #2c3e2a;
+    font-size: 1.1rem;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .steps-new__title {
+    font-size: 1.25rem;
+    color: #c5a880;
+    font-weight: 800;
+    margin-bottom: 15px;
+    line-height: 1.2;
+  }
+
+  .steps-new__desc {
+    font-size: 1rem;
+    color: rgba(230, 222, 200, 0.7);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .steps-new__cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .steps-new__microcopy {
+    font-size: 0.85rem;
+    color: rgba(230, 222, 200, 0.5);
+  }
+
+  @media (max-width: 992px) {
+    .steps-new__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px 30px;
+    }
+    .steps-new__line {
+      display: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .steps-new__grid {
+      grid-template-columns: 1fr;
+    }
+    .steps-new {
+      padding: 60px 0;
+    }
+  }
+</style>

@@ -1,0 +1,212 @@
+---
+// Seção 8: Sobre (Quem está por trás do projeto)
+const whatsappUrl = import.meta.env.PUBLIC_WHATSAPP_URL || "https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20entender%20como%20atrair%20pacientes%20particulares%20via%20Google%20Ads%20para%20minha%20clínica.";
+---
+
+<section class="about section section--dark" id="sobre">
+  <div class="container about__container fade-in-up">
+    <div class="about__grid">
+      <!-- Coluna da Foto (Esquerda no Desktop) -->
+      <div class="about__media">
+        <div class="image-wrapper">
+          <img 
+            src="/images/daniel.png" 
+            alt="Daniel — Fundador da Maximize Digital" 
+            class="about__image"
+            loading="lazy"
+          />
+          <div class="image-border-effect"></div>
+        </div>
+      </div>
+
+      <!-- Coluna do Texto (Direita no Desktop) -->
+      <div class="about__content">
+        <span class="tagline">A Mente por trás da Operação</span>
+        <h2 class="about__headline">
+          Daniel Munhoz
+        </h2>
+        
+        <div class="about__story">
+          <p>
+            Daniel começou sua jornada como empreendedor com um e-commerce. Formado em administração e com a experiência prática de uma loja online, ele acompanhou de perto o amadurecimento do mercado digital brasileiro e percebeu, desde cedo, o quanto os dados eram cruciais para tomar decisões verdadeiramente estratégicas.
+          </p>
+          <p>
+            Essa busca incessante por alavancar as próprias vendas fez com que ele dominasse as ferramentas de tráfego pago, passando a atuar também como gestor estratégico e ajudando outros negócios a prosperarem digitalmente.
+          </p>
+          <p>
+            Paralelamente, Daniel teve um contato profundo com a <strong>Filosofia e a formação humana</strong>. Desenvolveu habilidades sociais, emocionais and humanas através de abordagens terapêuticas, compreendendo que o seu serviço ia muito além do gerenciamento de anúncios ou do crescimento numérico: era sobre conectar pessoas e proporcionar que mais pacientes encontrem a ajuda de que precisam.
+          </p>
+          <p>
+            Unindo essa expertise em alavancar negócios com um propósito claro, Daniel fundou a <strong>Maximize Digital</strong>. Uma consultoria desenhada especificamente para conectar médicos de elite e clínicas a pacientes particulares de maneira assertiva e ética, fortalecendo a saúde em um mundo tão carente de referências.
+          </p>
+        </div>
+
+        <!-- Botão de CTA da Seção -->
+        <div class="about__cta">
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="btn btn--light btn--shine">
+            Conhecer o Trabalho
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    background-color: var(--color-primary);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about__container {
+    max-width: 1200px;
+  }
+
+  /* Grid de 2 Colunas (Alinhado no Topo) */
+  .about__grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  @media (max-width: 992px) {
+    .about__grid {
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+    }
+  }
+
+  /* Área da Foto */
+  .about__media {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 703 / 938; /* Proporção exata da foto */
+    z-index: 2;
+  }
+
+  .about__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(230, 222, 200, 0.15);
+    position: relative;
+    z-index: 2;
+  }
+
+  .image-border-effect {
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--color-accent);
+    border-radius: 16px;
+    z-index: 1;
+    opacity: 0.6;
+    transition: all var(--transition-normal);
+  }
+
+  .image-wrapper:hover .image-border-effect {
+    transform: translate(8px, -8px);
+    opacity: 1;
+  }
+
+  /* Conteúdo de Texto */
+  .about__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about__headline {
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    color: var(--color-bg);
+    margin-bottom: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  .text-accent {
+    color: var(--color-accent);
+  }
+
+  .about__story {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .about__story p {
+    font-size: 1.05rem;
+    color: var(--color-bg-light);
+    opacity: 0.85;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .about__story p strong {
+    color: var(--color-accent);
+    font-weight: 600;
+  }
+
+  /* CTA da Seção */
+  .about__cta {
+    margin-top: 2.5rem;
+    display: flex;
+  }
+
+  @media (max-width: 992px) {
+    .image-wrapper {
+      max-width: 350px;
+    }
+    
+    .image-border-effect {
+      left: -15px;
+      top: 15px;
+    }
+
+    .about__cta {
+      justify-content: center;
+    }
+  }
+
+  .btn--shine {
+    position: relative;
+    overflow: hidden;
+  }
+  .btn--shine::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    animation: shineEffect 6s ease-in-out infinite;
+  }
+  @keyframes shineEffect {
+    0%,
+    80% {
+      left: -100%;
+    }
+    100% {
+      left: 200%;
+    }
+  }
+</style>
