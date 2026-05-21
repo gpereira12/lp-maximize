@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://maximizedigital.com.br/sitemap.xml
+Sitemap: https://agenciamaximizedigital.com.br/sitemap.xml
