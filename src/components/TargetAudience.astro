@@ -1,5 +1,6 @@
 ---
 // Seção 5: Quem Nós Atendemos (Especialidades Foco)
+const whatsappUrl = import.meta.env.PUBLIC_WHATSAPP_URL || "https://wa.me/5511988829970?text=Oi%2C%20Daniel%21%20Vim%20pelo%20site%20de%20voc%C3%AAs%20e%20quero%20entender%20como%20posso%20captar%20mais%20pacientes%20particulares.%20Teria%20um%20momento%3F";
 ---
 
 <section class="target section" id="especialidades">
@@ -83,7 +84,7 @@
     </div>
 
     <div class="target__cta">
-      <a href="#contato" class="btn btn--primary">
+      <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="btn btn--primary">
         Quero Maximizar Meus Resultados
       </a>
     </div>

@@ -1,5 +1,6 @@
 ---
 // Seção 3: A Solução (Layout Premium em 2 Colunas com Conteúdo à Esquerda e Pilares à Direita)
+const whatsappUrl = import.meta.env.PUBLIC_WHATSAPP_URL || "https://wa.me/5511988829970?text=Oi%2C%20Daniel%21%20Vim%20pelo%20site%20de%20voc%C3%AAs%20e%20quero%20entender%20como%20posso%20captar%20mais%20pacientes%20particulares.%20Teria%20um%20momento%3F";
 ---
 
 <section class="solution section" id="solucao">
@@ -33,7 +34,7 @@
 
           <!-- CTA Integrado na Coluna da Esquerda -->
           <div class="solution__cta">
-            <a href="#contato" class="btn btn--primary btn--shine">
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--shine">
               Iniciar o Crescimento da Agenda
             </a>
             <span class="solution__microcopy">

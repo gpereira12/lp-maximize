@@ -1,5 +1,6 @@
 ---
 // Seção 4: O Passo a Passo da Campanha (Metodologia Otimizada Horizontal - Dark)
+const whatsappUrl = import.meta.env.PUBLIC_WHATSAPP_URL || "https://wa.me/5511988829970?text=Oi%2C%20Daniel%21%20Vim%20pelo%20site%20de%20voc%C3%AAs%20e%20quero%20entender%20como%20posso%20captar%20mais%20pacientes%20particulares.%20Teria%20um%20momento%3F";
 ---
 
 <section class="steps-new section section--dark" id="metodologia">
@@ -56,7 +57,7 @@
     </div>
 
     <div class="steps-new__cta">
-      <a href="#contato" class="btn btn--light">
+      <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="btn btn--light">
         Aplicar Este Funil na Minha Clínica
       </a>
       <span class="steps-new__microcopy">

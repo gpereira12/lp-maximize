@@ -1,5 +1,6 @@
 ---
 // Seção 2: Diagnóstico Interativo de Rotina (4 Sintomas Mapeados e Barra de Progresso)
+const whatsappUrl = import.meta.env.PUBLIC_WHATSAPP_URL || "https://wa.me/5511988829970?text=Oi%2C%20Daniel%21%20Vim%20pelo%20site%20de%20voc%C3%AAs%20e%20quero%20entender%20como%20posso%20captar%20mais%20pacientes%20particulares.%20Teria%20um%20momento%3F";
 ---
 
 <section class="problem section section--dark" id="problema">
@@ -261,7 +262,7 @@
 
     <!-- CTA de Transição -->
     <div class="problem__cta">
-      <a href="#contato" class="btn btn--light btn--shine-dark">
+      <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="btn btn--light btn--shine-dark">
         Quero a Estratégia Certa
       </a>
       <span class="problem__microcopy">
