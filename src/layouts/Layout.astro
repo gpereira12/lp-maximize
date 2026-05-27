@@ -119,7 +119,11 @@ const schemaJson = {
       };
 
       // Inicializa quando o DOM estiver pronto
-      document.addEventListener('DOMContentLoaded', setupAnimations);
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupAnimations);
+      } else {
+        setupAnimations();
+      }
     </script>
   </body>
 </html>
